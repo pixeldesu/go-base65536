@@ -1,4 +1,4 @@
-# go-base65536
+# go-base65536 [![GoDoc](https://godoc.org/github.com/Nightbug/go-base65536?status.svg)](https://godoc.org/github.com/Nightbug/go-base65536)
 
 Go library for encoding data into [base65536](https://github.com/ferno/base65536).
 
@@ -37,3 +37,7 @@ func main() {
 	}
 }
 ```
+
+## License
+
+MIT
