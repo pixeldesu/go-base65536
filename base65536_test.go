@@ -25,5 +25,20 @@ func TestMarshal(t *testing.T) {
 }
 
 func TestUnmarshal(t *testing.T) {
-
+	converted := []string{}
+	for _, val := range testValuesString {
+		converted = append(converted, Marshal([]byte(val)))
+	}
+	for index, val := range converted {
+		out := []byte{}
+		err := Unmarshal([]byte(val), &out)
+		if err != nil {
+			t.Errorf("Error while unmarshaling: %s\n", err)
+			continue
+		}
+		fmt.Println(testValuesString[index], "==>", val, "==>", string(out))
+		if testValuesString[index] != string(out) {
+			t.Error("(check above log) original value doesn't match end value")
+		}
+	}
 }
