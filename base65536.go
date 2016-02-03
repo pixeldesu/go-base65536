@@ -23,6 +23,8 @@ func Marshal(data []byte) string {
 	return res
 }
 
+// Unmarshal appends to out the bytes decoded from data. It can return an error,
+// in case the decoding failed.
 func Unmarshal(data []byte, out *[]byte) error {
 	done := false
 	var b1 int16
