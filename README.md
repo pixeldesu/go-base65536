@@ -31,7 +31,7 @@ import (
 
 func main() {
 	var out []byte
-	err := base65536.Marshal([]byte("驨ꍬ啯𒁷ꍲᕤ"), &out)
+	err := base65536.Unmarshal([]byte("驨ꍬ啯𒁷ꍲᕤ"), &out)
 	if err != nil {
 		panic(err)
 	}
